@@ -1,0 +1,109 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    color: #353535;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-font {
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+}
+
+#login, #content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#content {
+    z-index: 1;
+    visibility: hidden;
+}
+
+#login {
+    z-index: 2;
+}
+
+#login > .box {
+    display: flex;
+    flex-direction: column;
+}
+
+#login > .box > h1 {
+    text-align: center;
+}
+
+#login > .box > .line {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+#login > .box > .line > .title {
+    width: 90px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#content > .line {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+#content > .line >input{
+    flex: 1;
+}
+
+#content > .line > .title {
+    width: 90px;
+}
+
+#content > .payload {
+    flex: 1;
+    height: 0;
+    justify-content: space-between;
+}
+
+#content > .payload > .block {
+    width: calc(50% - 5px);
+    border: 1px solid #ccc;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+#content > .payload > .block > .value {
+    flex: 1;
+    height: 0;
+}
+
+#content > .bottom {
+    height: 50px;
+}

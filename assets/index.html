@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/jsoneditor/9.5.0/jsoneditor.min.css" rel="stylesheet">
+    <script src="./script.js" type="text/javascript"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jsoneditor/9.5.0/jsoneditor.min.js"></script>
+</head>
+<body>
+<div id="login" class="center">
+    <div class="box">
+        <h1>接口调试工具</h1>
+        <div class="line">
+            <div class="title title-font">
+                [接入点]
+            </div>
+        </div>
+        <div class="line">
+            <div class="title title-font">
+                Address
+            </div>
+            <input name="address" type="text" placeholder="http://localhost" value="http://127.0.0.1"/>
+        </div>
+        <br/>
+        <div class="line">
+            <div class="title title-font">
+                [账号密码登录]
+            </div>
+        </div>
+        <div class="line">
+            <div class="title title-font">
+                ID
+            </div>
+            <input name="username" type="text" placeholder="username" value=""/>
+        </div>
+        <div class="line">
+            <div class="title title-font">
+                Password
+            </div>
+            <input name="password" type="password" value=""/>
+        </div>
+        <br/>
+        <div class="line">
+            <div class="title title-font">
+                [凭证登录]
+            </div>
+        </div>
+        <div class="line">
+            <div class="title title-font">
+                AK
+            </div>
+            <input name="ak" type="text" value=""/>
+        </div>
+        <div class="line">
+            <div class="title title-font">
+                Token
+            </div>
+            <input name="token" type="text" value=""/>
+        </div>
+        <br/>
+        <button>登入</button>
+    </div>
+</div>
+
+<div id="content">
+    <div class="line">
+        <div class="title title-font">
+            分布式id
+        </div>
+        <input name="plaintext" type="text" placeholder="明文"/>
+        <input name="ciphetext" type="text" placeholder="秘文"/>
+        <button id="get">get</button>
+    </div>
+    <div class="line">
+        <div class="title title-font">
+            api调试工具:
+        </div>
+    </div>
+    <div class="line">
+        <div class="title title-font">URL :</div>
+        <span id="address"></span>
+        <input name="uri" type="text">
+    </div>
+    <div class="line payload">
+        <div class="body block">
+            <div class="title-font">Body :</div>
+            <div id="jsoneditor-edit" class="value">
+            </div>
+        </div>
+        <div class="response block">
+            <div class="title-font">Response :</div>
+            <div id="jsoneditor-readonly" class="value">
+            </div>
+        </div>
+    </div>
+    <div class="line center bottom">
+        <button id="request">request</button>
+        <button id="clean">clean cache</button>
+    </div>
+</div>
+</body>
+</html>

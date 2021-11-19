@@ -1,3 +1,31 @@
+window.addEventListener('contextmenu', (event) => event.preventDefault());
+if (/macintosh|mac os x/i.test(navigator.userAgent)) {
+    //修复快捷键
+    window.addEventListener("keypress", (event) => {
+        if (event.metaKey) {
+            if (event.key === 'c') {
+                document.execCommand("copy");
+                event.preventDefault();
+            } else if (event.key === 'v') {
+                document.execCommand("paste");
+                event.preventDefault();
+            } else if (event.key === 'x') {
+                document.execCommand("cut");
+                event.preventDefault();
+            } else if (event.key === 'a') {
+                document.execCommand("selectall");
+                event.preventDefault();
+            } else if (event.shiftKey && event.key === 'z') {
+                document.execCommand("redo");
+                event.preventDefault();
+            } else if (event.key === 'z') {
+                document.execCommand("undo");
+                event.preventDefault();
+            }
+        }
+    })
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     document.removeEventListener('DOMContentLoaded', arguments.callee, false);
     const loginDom = document.querySelector('#login');

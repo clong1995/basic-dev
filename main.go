@@ -16,10 +16,12 @@ import (
 var address string
 var token string
 var accessKeyID []byte
-var contentHmac = "Content-Hmac"
 
-//var url = "https://jyyf.tech/dev-tool"
-var url = "http://localhost:63341/app/assets/index.html"
+const contentHmac = "Content-Hmac"
+
+//const url = "https://jyyf.tech/dev-tool"
+//const url = "https://www.duckduckgo.com"
+const url = "http://localhost:63342/basic-dev/assets/index.html?_ijt=2ms73lvvqm1k5ajtntpdrliiqm"
 
 func main() {
 	w := webview.New(false)
@@ -46,7 +48,7 @@ func main() {
 		log.Println(err)
 		return
 	}
-
+	//w.Eval(`window.addEventListener('contextmenu', (event) => event.preventDefault());`)
 	w.Run()
 }
 

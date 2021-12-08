@@ -1,1 +1,1 @@
-go build -ldflags="-H windowsgui" -trimpath -ldflags "-s -w" -o ./dist/windows/app.exe ../
+go build -ldflags="-H windowsgui -s -w" -trimpath -o ./dist/windows/app.exe ../

@@ -19,9 +19,9 @@ var accessKeyID []byte
 
 const contentHmac = "Content-Hmac"
 
-//const url = "https://jyyf.tech/dev-tool"
-//const url = "https://www.duckduckgo.com"
-const url = "http://localhost:63342/basic-dev/assets/index.html?_ijt=2ms73lvvqm1k5ajtntpdrliiqm"
+const url = "https://jyyf.tech/dev-tool"
+
+//const url = "http://localhost:63342/basic-dev/assets/index.html?_ijt=2ms73lvvqm1k5ajtntpdrliiqm"
 
 func main() {
 	w := webview.New(false)
